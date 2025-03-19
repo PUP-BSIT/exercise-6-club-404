@@ -4,8 +4,9 @@ body {
   margin: 0px;
   padding: 0px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-               "Lucida Sans", Arial, sans-serif;
+    "Lucida Sans", Arial, sans-serif;
   align-items: center;
+  animation: fadeIn 1.5s ease-in-out;
 }
 
 .header {
@@ -15,8 +16,8 @@ body {
   padding-top: 2rem;
   padding-bottom: 1rem;
   background-image: url(./images/bg.jpg);
-  background-color: #0d1b2a;
   background-blend-mode: overlay;
+  background-color: #0d1b2a;
 }
 
 .header-intro {
@@ -41,7 +42,8 @@ body {
 .my-works h2,
 .testimonials h2,
 .my-picture h2,
-.text-info h2 {
+.text-info h2,
+.my-goals h2 {
   background-color: #04023f;
   text-align: center;
   padding: 10px;
@@ -52,11 +54,16 @@ body {
 .interest,
 .my-works,
 .testimonials,
-.my-picture ul {
+.my-goals,
+.text-info,
+.my-picture,
+.my-goals ul {
   margin-bottom: 5vw;
 }
 
-.interest ul {
+.interest ul,
+.my-goals > ul,
+.my-goals li {
   display: flex;
   flex-direction: row;
   text-align: center;
@@ -77,9 +84,6 @@ li {
   border-radius: 10px;
   padding: 1rem;
   list-style-type: none;
-  height: 100%;
-  width: 20%;
-  margin: 0 auto;
 }
 
 .my-works ol {
@@ -105,13 +109,14 @@ li {
   text-decoration: underline;
 }
 
-ul, ol {
-  padding: 0px;
+ul,
+ol {
+  padding: 0;
 }
 
 .interest ul,
 .my-works ol,
-.testimonials p {
+.testimonials p .my-goals ul {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: nowrap;
@@ -129,6 +134,8 @@ p {
   height: 10vh;
   flex-direction: row;
   text-align: center;
+  margin: 2rem;
+  padding: 1rem;
 }
 
 .photos {
@@ -144,12 +151,12 @@ p {
   margin: 0px;
   padding: 1vw;
   gap: 2rem;
-  border: 2px solid lightblue;
-  border-radius: 10px;
-  margin-bottom: 2rem;
   object-fit: cover;
   transition: 0.2s ease-in-out;
   cursor: pointer;
+  border: 2px solid lightblue;
+  border-radius: 10px;
+  margin-bottom: 2rem;
 }
 
 .photos img:hover {
@@ -281,166 +288,107 @@ p {
   font-size: 30px;
 }
 
-@media (max-width: 320px) {
-  body {
-    font-size: 12px;
-  }
-
-  .header > img {
-    display: none;
-  }
-
-  .photos img {
-    width: 100%;
-    height: auto;
-  }
-
-  .interest ul,
-  .my-works ol {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .testimonials p {
-    font-size: 12px;
-    padding: 8px;
-    margin: 8px auto;
-    height: auto;
-    max-width: 90%;
-    text-align: center;
-    line-height: 1.5;
-    word-wrap: break-word; 
-  }
-
-  .contact-form {
-    padding: 10px;
-    width: 90%;
-  }
-
-  .form-container {
-    padding: 10px;
-  }
-
-  .form-grid {
-    display: block; 
-  }
-
-  .form-grid label,
-  .form-grid input,
-  .contact-form textarea,
-  .contact-form button {
-    width: 100%; 
-    font-size: 12px;
-  }
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+  margin: auto;
+  gap: 1rem;
+  padding: 20px;
+  background: #3a628c;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-@media (min-width: 321px) and (max-width: 375px) {
-  body {
-    font-size: 13px;
-  }
-
-  .header > img {
-    display: none;
-  }
-
-  .photos img {
-    width: 100%;
-    height: auto;
-  }
-
-  .interest ul,
-  .my-works ol {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .testimonials p {
-    font-size: 13px;
-    padding: 10px;
-    margin: 10px auto;
-    height: auto;
-    max-width: 90%;
-    text-align: center;
-    line-height: 1.6;
-    word-wrap: break-word;
-  }
-
-  .contact-form {
-    padding: 15px;
-    width: 90%;
-  }
-
-  .form-container {
-    padding: 15px;
-  }
-
-  .form-grid {
-    display: block;
-  }
-
-  .form-grid label,
-  .form-grid input,
-  .contact-form textarea,
-  .contact-form button {
-    width: 100%;
-    font-size: 13px;
-  }
+.comment-form div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
 }
 
-@media (min-width: 376px) and (max-width: 425px) {
+.comment-form input,
+.comment-form button,
+.comment-form textarea {
+  width: 100%;
+  border: 2px solid lightblue;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.comment-form button {
+  padding: 5px;
+}
+
+.comment-form textarea {
+  resize: none;
+}
+
+.comment-form label {
+  margin: 3px;
+}
+
+.comment-info h3 {
+  text-align: center;
+  align-items: center;
+  justify-self: center;
+  display: flex;
+  margin-top: 10px;
+}
+
+.my-goals input[type="text"] {
+  width: 100%;
+  padding: 5px;
+  font-size: 15px;
+  border: 2px solid lightblue;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#comment_container {
+  margin-bottom: 10px;
+  margin: 60px;
+  padding: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+.comments {
+  padding: 8px;
+  margin: auto;
+  margin-bottom: 10px;
+  background-color: #8dd2e7;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #007bff;
+}
+
+.comments strong {
+  color: #007bff;
+}
+
+.comments p {
+  margin: 5px;
+  font-size: 14px;
+  color: #333333;
+  border: 1px solid rgb(89, 139, 219);
+}
+
+.comment-form button:disabled {
+  color: white;
+}
+
+.comment-form button:enabled {
+  cursor: pointer;
+  background-color: lightblue;
+}
+
+@media (max-width: 768px) {
   body {
     font-size: 14px;
   }
 
-  .header > img {
-    display: none;
-  }
-
-  .photos img {
-    width: 100%;
-    height: auto;
-  }
-
-  .interest ul,
-  .my-works ol {
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-
-  .testimonials p {
-    font-size: 14px;
-    padding: 12px;
-    margin: 12px auto;
-    height: auto;
-    max-width: 90%;
-    text-align: center;
-    line-height: 1.6;
-    word-wrap: break-word;
-  }
-
-  .contact-form {
-    padding: 20px;
-    width: 85%;
-  }
-
-  .form-container {
-    padding: 20px;
-  }
-
-  .form-grid {
-    display: block;
-  }
-
-  .form-grid label,
-  .form-grid input,
-  .contact-form textarea,
-  .contact-form button {
-    width: 100%;
-    font-size: 14px;
-  }
-}
-
-@media (min-width: 426px) and (max-width: 768px) {
   .header {
     flex-direction: column;
     text-align: center;
@@ -457,39 +405,41 @@ p {
   }
 
   .interest ul,
-  .my-works ol {
+  .my-works ol,
+  .my-goals ul {
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
   }
 
   .testimonials p {
-    font-size: 15px;
-    padding: 15px;
-    margin: 15px auto;
+    font-size: 14px;
+    padding: 10px;
+    margin: 10px auto;
     height: auto;
-    max-width: 80%; 
+    max-width: 90%;
     text-align: center;
     line-height: 1.6;
     word-wrap: break-word;
   }
 
   .photos img {
-    width: 100%;
+    width: 80%;
     height: auto;
+    margin: 1rem 0;
+    padding: 2vw;
   }
 
   .contact-form {
-    padding: 20px;
-    width: 80%;
+    padding: 10px;
+    width: 90%;
   }
 
   .form-container {
-    padding: 25px;
+    padding: 10px;
   }
 
   .form-grid {
-    grid-template-columns: 1fr; 
-    gap: 15px;
+    display: block;
   }
 
   .form-grid label,
@@ -497,7 +447,57 @@ p {
   .contact-form textarea,
   .contact-form button {
     width: 100%;
-    font-size: 15px;
+    font-size: 14px;
+  }
+
+  .comment-form {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .comment-form input,
+  .comment-form textarea {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .comment-form button {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .comment-list {
+    margin: 10px;
+  }
+
+  .comment-list li {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  .user-tag {
+    font-size: 14px;
+  }
+
+  .user-comment {
+    font-size: 14px;
+  }
+
+  #comment_container {
+    margin: 10px;
+    padding: 10px;
+    width: 90%;
+  }
+
+  .comments {
+    padding: 8px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  .comments p {
+    font-size: 12px;
   }
 }
 
@@ -525,7 +525,7 @@ p {
   }
 
   .form-grid {
-    grid-template-columns: 1fr 1fr; 
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
   }
 
@@ -534,5 +534,41 @@ p {
   .contact-form textarea,
   .contact-form button {
     font-size: 16px;
+  }
+
+  .comment-form {
+    width: 70%;
+    padding: 20px;
+  }
+
+  .comment-form input,
+  .comment-form textarea {
+    font-size: 16px;
+  }
+
+  .comment-form button {
+    font-size: 16px;
+    padding: 10px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    visibility: hidden;
   }
 }
