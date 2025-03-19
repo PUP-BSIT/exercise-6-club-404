@@ -1,3 +1,4 @@
+/* For variables (colors etc.), custom properties */
 :root {
     --color1: #222831;
     --color2: #31363F;
@@ -6,17 +7,20 @@
     --color5: #1E3E62;
 }
 
+/* * - all styles are applied to HTML elements */
 * {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* target: body */
 body {
     background-color: var(--color1);
 }
 
+/* target: header container */
 .header-container {
     background-color: var(--color2);
-    display: flex;
+    display: flex; /* flex makes div merge together */
     justify-content: center;
     gap: 30px;
     padding: 50px;
@@ -24,12 +28,14 @@ body {
     margin: auto;
 }
 
+/* target: name(Justine Delima) */
 .name-container {
     height: 100px;
     max-width: 15%;
     margin-top: 30px;
 }
 
+/* target: pixel image */
 .pixel-container img {
     display: block;
     margin-left: auto;
@@ -38,11 +44,13 @@ body {
     height: 200px;
 }
 
+/* target: header 1 */
 h1 {
     color: var(--color4)
 }
 
-h2 {
+/* target: header 2 */
+.inthobb-container h2 {
     text-align: center;
     background-color: var(--color2);
     color: var(--color4);
@@ -50,18 +58,53 @@ h2 {
     margin-bottom: 50px;
 }
 
-p {
-    color: var(--color4);
+.works-container h2 {
     text-align: center;
-    border: 3px dashed var(--color2);
-    padding: 10px;
+    background-color: var(--color2);
+    color: var(--color4);
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 50px;
 }
 
+.testimonials-container h2 {
+    text-align: center;
+    background-color: var(--color2);
+    color: var(--color4);
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 50px;
+}
+
+.gallery-container h2 {
+    text-align: center;
+    background-color: var(--color2);
+    color: var(--color4);
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 50px;
+}
+
+.goals-container h2 {
+    text-align: center;
+    background-color: var(--color2);
+    color: var(--color4);
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 50px;
+}
+
+/* target: paragraphs. */
+.testimonials-container p {
+    color: var(--color4);
+    text-align: center;
+    padding: 10px;
+    border: 2px dashed var(--color2)
+}
+
+/* target: interest & hobbies container */
 .inthobb-container {
     padding: 50px 50px;
     border: 5px dashed var(--color2);
 }
 
+/* target: interest & hobbies unordered list */
 .inthobb-container ul {
     color: var(--color4);
     font-weight: lighter;
@@ -74,12 +117,14 @@ p {
     margin-top: 20px;
 }
 
+/* target: my works */
 .works-container {
     border: 5px solid var(--color2);
     padding: 50px 50px;
     margin: auto;
 }
 
+/* target: my works ordered list */
 .works-container ol {
     color: var(--color4);
     list-style: none;
@@ -89,6 +134,7 @@ p {
     padding-left: 0;
 }
 
+/* target: my works links */
 .links-container ol a {
     color: var(--color4);
     text-decoration: none;
@@ -97,16 +143,19 @@ p {
     background-color: var(--color5); 
 }
 
+/* target: testimonials */
 .testimonials-container {
     padding: 50px 50px;
     border: 5px solid var(--color2);
 }
 
+/* target: my gallery */
 .gallery-container {
     padding: 50px 50px;
     border: 5px solid var(--color2);
 }
 
+/* target: images in gallery */
 .gallery-container img {
     margin-left: 0;
     margin-right: 0;
@@ -116,35 +165,43 @@ p {
     border-radius: 5px;
 }
 
+/* target: mitsuki image only. */
 #mitsuki_image {
     margin-top: 30px;
 }
 
+/* target: row 1 images */
 .first-row {
     display: flex;
     justify-content: space-evenly;
     margin-bottom: 10px;
 }
 
+/* target: row 2 images */
 .second-row {
     display: flex;
     justify-content: space-evenly;
     margin-bottom: 10px;
 }
 
+/* target: row 3 images  */
 .third-row {
     display: flex;
     justify-content: space-evenly;
 }
 
+/* -target: contact form- */
+/* target: div form container. */
 .form-container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 550px;
-    width: 100%;
+    width: 99%;
+    border: 5px solid var(--color2);
 }
 
+/* target: form element */
 form {
     height: 288px;
     width: 400px;
@@ -152,6 +209,7 @@ form {
     background-color: var(--color2);
 }
 
+/* target: form class input */
 .input-container {
     display: flex;
     justify-content: center;
@@ -160,9 +218,11 @@ form {
     margin-bottom: 20px;
 }
 
+/* target:  textarea */
 textarea {
     height: 100px;
     width: 100%;
+    resize: none;
 } 
 
 input {
@@ -170,11 +230,13 @@ input {
     width: 100%;
 }
 
+/* target: div of button */
 #submit_button {
     display: flex;
     justify-content: center;
 }
 
+/* target: button */
 button {
     border: none;
     width: 150px;
@@ -186,12 +248,14 @@ button {
     cursor: pointer;
 }
 
+/* target: fieldset */
 fieldset {
     height: 330px;
     width: 420px;
     border-radius: 5px;
 }
 
+/* target: legend */
 legend {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 900;
@@ -201,7 +265,9 @@ legend {
     padding: 0 10px; 
 }
 
+/* ------------------------- Mobile S ---------------------------- */
 @media(min-width: 320px) {
+    /* target: header container */
     .header-container {
         background-color: var(--color2);
         display: flex;
@@ -212,17 +278,20 @@ legend {
         margin: auto;
     }
 
+    /* target: testimonials */
     .testimonials-container {
         padding: 50px 10px;
         border: 5px solid var(--color2);
     }
 
+    /* target: my works */
     .works-container {
         border: 5px solid var(--color2);
         padding: 50px 50px;
         margin: auto;
     }
 
+    /* target: my works ordered list */
     .works-container ol {
         color: var(--color4);
         list-style: none;
@@ -233,6 +302,7 @@ legend {
         padding-left: 0;
     }   
 
+    /* target: images in gallery */
     .gallery-container img {
         margin-left: 0;
         margin-right: 0;
@@ -242,11 +312,13 @@ legend {
         border-radius: 5px;
     }
 
+    /* target: mitsuki image only. */
     #mitsuki_image {
         margin-top: 0;
         height: 115px;
     }
 
+    /* target: row 1 images */
     .first-row {
         display: flex;
         justify-content: space-evenly;
@@ -256,6 +328,7 @@ legend {
         flex-wrap: wrap;
     }
 
+    /* target: row 2 images */
     .second-row {
         display: flex;
         justify-content: space-evenly;
@@ -265,6 +338,7 @@ legend {
         flex-wrap: wrap;
     }
 
+    /* target: row 3 images  */
     .third-row {
         display: flex;
         justify-content: space-evenly;
@@ -274,36 +348,126 @@ legend {
         flex-wrap: wrap;
     }
 
+    /* target: div form container. */
     .form-container {
         display: flex;
         justify-content: center;
         align-items: center;
         height: 485px;
-        width: 100%;
+        width: auto;
+        border: 5px solid var(--color2);
     }
 
+    /* target: fieldset */
+    fieldset {
+        height: 330px;
+        width: 251px;
+        border-radius: 5px;
+    }
+
+    /* target: form element */
     form {
         height: 288px;
-        width: 258px;
+        width: 231px;
         padding: 10px;
         background-color: var(--color2);
     }
+
+    /* Added for exercise 6 */
+    .goals-container {
+        height: auto;
+        width: auto;
+        padding: 50px;
+        border: 5px solid var(--color2);
+    }
+
+    .goal-list ol {
+        display: flex;
+        flex-direction: column;
+        gap: 4vh;
+        padding: 0;
+        justify-content: center;
+    }
+
+    .goal-list li {
+        display: flex;
+        color: var(--color4);
+        list-style: none;
+        justify-content: center;
+    }
+
+    .comment-container {
+        border: 5px solid var(--color2);
+        padding: 50px 10px;
+    }
+
+    .comment-form form {
+        height: 300px;
+        width: auto;
+        padding: 7px;
+        background-color: var(--color2);
+        border: 2px dashed var(--color1);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 4vh;
+    }
+
+    #input_name {
+        width: 225px;
+        border-radius: 10px;
+    }
+
+    #comment_area {
+        width: 225px;
+        border-radius: 10px;
+    }
+
+    label {
+        color: var(--color4);
+    }
+
+    .comment-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10vh;
+    }
+
+    .comment-hdr-container h2 {
+        color: var(--color4);
+        text-align: center;
+        background-color: var(--color2);
+        padding: 15px;
+        margin: 0;
+    }
+
+    .comment-hdr-container p {
+        color: var(--color4);
+        border: 2px dashed var(--color2);
+        text-align: center;
+        padding: 10px;
+    }
 }
 
+/* ------------------ Mobile M Size ------------------------ */ 
 @media(min-width: 321px) and (max-width: 375px) {
     #mitsuki_image {
         margin-top: 0;
         height: 150px;
     }
 
+    /* target: div form container. */
     .form-container {
         display: flex;
         justify-content: center;
         align-items: center;
         height: 490px;
-        width: 100%;
+        width: auto;
     }
 
+    /* target: form element */
     form {
         height: 288px;
         width: auto;
@@ -312,19 +476,22 @@ legend {
     }
 }
 
+/* ------------------ Mobile L Size ------------------------ */
 @media(min-width: 376px) and (max-width: 425px) {
     #mitsuki_image {
         height: 200px;
     }
 
+    /* target: div form container. */
     .form-container {
         display: flex;
         justify-content: center;
         align-items: center;
         height: 500px;
-        width: 100%;
+        width: auto;
     }
 
+    /* target: form element */
     form {
         height: 288px;
         width: auto;
@@ -333,59 +500,78 @@ legend {
     }
 }
 
+/* ------------------ Tablet Size ------------------------ */
 @media(min-width: 426px) and (max-width: 768px){
+    .inthobb-container ul {
+        display: flex;
+        flex-direction: row;
+        gap: 60px;
+        justify-content: center;
+    }
+    
     #mitsuki_image {
         height: 330px;
     }
 
+    /* target: div form container. */
     .form-container {
         display: flex;
         justify-content: center;
         align-items: center;
         height: 510px;
-        width: 100%;
+        width: auto;
     }
 
+    /* target: form element */
     form {
         height: 288px;
         width: auto;
         padding: 10px;
         background-color: var(--color2);
     }
-}
 
-@media(min-width: 769px) and (max-width: 1024px) {
-    p {
-        color: var(--color4);
-        text-align: center;
-        border: 3px dashed var(--color2);
-        padding-top: 10px;
-        padding-bottom: 10px;
+    .comment-form {
+        display: flex;
+        justify-content: center;
     }
 
+    .comment-form form {
+        width: 361px;
+    }
+}
+
+/* ------------------ Laptop Size ------------------------ */
+@media(min-width: 769px) and (max-width: 1024px) {
+    /* target: interest & hobbies container */
     .inthobb-container {
         padding: 50px 50px;
         border: 5px dashed var(--color2);
     }
 
+    /* target: interest & hobbies unordered list */
     .inthobb-container ul {
         color: var(--color4);
         font-weight: lighter;
         list-style: none;
-        text-align: center;
         padding-left: 0;
+        display: flex;
+        flex-direction: row;
+        gap: 104px;
+        justify-content: center;
     }
 
     .inthobb-container li {
         margin-top: 20px;
     }
 
+    /* target: my works */
     .works-container {
         border: 5px solid var(--color2);
         padding: 50px 50px;
         margin: auto;
     }
 
+    /* target: my works ordered list */
     .works-container ol {
         color: var(--color4);
         list-style: none;
@@ -395,6 +581,7 @@ legend {
         padding-left: 0;
     }
 
+    /* target: my works links */
     .links-container ol a {
         color: var(--color4);
         text-decoration: none;
@@ -403,16 +590,19 @@ legend {
         background-color: var(--color5); 
     }
 
+    /* target: testimonials */
     .testimonials-container {
         padding: 50px 50px;
         border: 5px solid var(--color2);
     }
 
+    /* target: my gallery */
     .gallery-container {
         padding: 50px 50px;
         border: 5px solid var(--color2);
     }
 
+    /* target: images in gallery */
     .gallery-container img {
         margin-left: 0;
         margin-right: 0;
@@ -422,11 +612,13 @@ legend {
         border-radius: 5px;
     }
 
+    /* target: mitsuki image only. */
     #mitsuki_image {
         margin-top: 30px;
         height: 240px;
     }
 
+    /* target: row 1 images */
     .first-row {
         display: flex;
         flex-direction: row;
@@ -434,6 +626,7 @@ legend {
         margin-bottom: 10px;
     }
 
+    /* target: row 2 images */
     .second-row {
         display: flex;
         flex-direction: row;
@@ -441,6 +634,7 @@ legend {
         margin-bottom: 10px;
     }
 
+    /* target: row 3 images  */
     .third-row {
         display: flex;
         flex-direction: row;
@@ -452,18 +646,66 @@ legend {
         justify-content: center;
         align-items: center;
         height: 510px;
-        width: 100%;
+        width: auto;
     }
 
+    /* target: form element */
     form {
         height: 288px;
         width: auto;
         padding: 10px;
         background-color: var(--color2);
     }
+
+    .goals-container ol {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 70px;
+    }
+
+    .comment-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 20px;
+        padding: 20px 100px;
+    }
+
+    .comment-form {
+        display: flex;
+        justify-content: center;
+    }
+
+    .comment-form form {
+        width: 361px;
+    }
 }
 
+/* ------------------ Above Size ------------------------ */
 @media(min-width: 1025px) {
+    /* target: interest & hobbies container */
+    .inthobb-container {
+        padding: 50px 50px;
+        border: 5px dashed var(--color2);
+    }
+
+    /* target: interest & hobbies unordered list */
+    .inthobb-container ul {
+        color: var(--color4);
+        font-weight: lighter;
+        list-style: none;
+        padding-left: 0;
+        display: flex;
+        flex-direction: row;
+        gap: 104px;
+        justify-content: center;
+    }
+
+    .inthobb-container li {
+        margin-top: 20px;
+    }
+
+    /* target: images in gallery */
     .gallery-container img {
         margin-left: 0;
         margin-right: 0;
@@ -473,11 +715,13 @@ legend {
         border-radius: 5px;
     }
 
+    /* target: mitsuki image only. */
     #mitsuki_image {
         margin-top: 37px;
         height: 100%;
     }
 
+    /* target: row 1 images */
     .first-row {
         display: flex;
         flex-direction: row;
@@ -485,6 +729,7 @@ legend {
         margin-bottom: 10px;
     }
 
+    /* target: row 2 images */
     .second-row {
         display: flex;
         flex-direction: row;
@@ -492,24 +737,54 @@ legend {
         margin-bottom: 10px;
     }
 
+    /* target: row 3 images  */
     .third-row {
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
     }
 
+    /* target: div form container. */
     .form-container {
         display: flex;
         justify-content: center;
         align-items: center;
         height: 550px;
-        width: 100%;
+        width: auto;
     }
 
+    /* target: form element */
     form {
         height: 288px;
         width: 400px;
         padding: 10px;
         background-color: var(--color2);
+    }
+
+    textarea {
+        width: 100%;
+    }
+
+    .goals-container ol {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 70px;
+    }
+
+    .comment-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 20px;
+        padding: 20px 100px;
+    }
+
+    .comment-form {
+        display: flex;
+        justify-content: center;
+    }
+
+    .comment-form form {
+        width: 361px;
     }
 }
