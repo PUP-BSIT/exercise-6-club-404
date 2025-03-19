@@ -380,14 +380,6 @@ body {
     border: 5px solid black;
   }
 
-  #gallery_image_1 {
-    height: 90px;
-    width: 30px;
-    position: relative;
-    left: 15px;
-    top: 10px;
-  }
-
   #button {
     border-radius: 20px;
     position: absolute;
