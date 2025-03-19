@@ -213,28 +213,6 @@ li {
     transform: scale(1.05);
 }
 
-.fa-sparkles, .fa-heart {
-    display: inline-block;  /* Ensures animations work */
-    color: red;
-    animation: sparkles 1.5s infinite;
-}
-
-@keyframes sparkles {
-    0% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.5; transform: scale(1.2); }
-    100% { opacity: 1; transform: scale(1); }
-}
-
-.fa-sparkles {
-    color: gold;
-    animation: sparkles 1.5s infinite;
-}
-
-.fa-heart {
-    color: red;
-    animation: sparkles 2s infinite;
-}
-
 .my-gallery {
     margin-top: 10px;
     background: linear-gradient(to bottom, #fce4ec, #f8bbd0);
