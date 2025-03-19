@@ -1,0 +1,515 @@
+:root {
+    --color1: #222831;
+    --color2: #31363F;
+    --color3: #76ABAE;
+    --color4: #EEEEEE;
+    --color5: #1E3E62;
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: var(--color1);
+}
+
+.header-container {
+    background-color: var(--color2);
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px;
+    padding-bottom: 0px;
+    margin: auto;
+}
+
+.name-container {
+    height: 100px;
+    max-width: 15%;
+    margin-top: 30px;
+}
+
+.pixel-container img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    height: 200px;
+}
+
+h1 {
+    color: var(--color4)
+}
+
+h2 {
+    text-align: center;
+    background-color: var(--color2);
+    color: var(--color4);
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 50px;
+}
+
+p {
+    color: var(--color4);
+    text-align: center;
+    border: 3px dashed var(--color2);
+    padding: 10px;
+}
+
+.inthobb-container {
+    padding: 50px 50px;
+    border: 5px dashed var(--color2);
+}
+
+.inthobb-container ul {
+    color: var(--color4);
+    font-weight: lighter;
+    list-style: none;
+    text-align: center;
+    padding-left: 0;
+}
+
+.inthobb-container li {
+    margin-top: 20px;
+}
+
+.works-container {
+    border: 5px solid var(--color2);
+    padding: 50px 50px;
+    margin: auto;
+}
+
+.works-container ol {
+    color: var(--color4);
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding-left: 0;
+}
+
+.links-container ol a {
+    color: var(--color4);
+    text-decoration: none;
+    border: 3px solid var(--color2);
+    padding: 4px 15px;
+    background-color: var(--color5); 
+}
+
+.testimonials-container {
+    padding: 50px 50px;
+    border: 5px solid var(--color2);
+}
+
+.gallery-container {
+    padding: 50px 50px;
+    border: 5px solid var(--color2);
+}
+
+.gallery-container img {
+    margin-left: 0;
+    margin-right: 0;
+    height: 100%;
+    width: 48%;
+    border: 5px solid var(--color2);
+    border-radius: 5px;
+}
+
+#mitsuki_image {
+    margin-top: 30px;
+}
+
+.first-row {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+}
+
+.second-row {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+}
+
+.third-row {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 550px;
+    width: 100%;
+}
+
+form {
+    height: 288px;
+    width: 400px;
+    padding: 10px;
+    background-color: var(--color2);
+}
+
+.input-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+textarea {
+    height: 100px;
+    width: 100%;
+} 
+
+input {
+    height: 29px;
+    width: 100%;
+}
+
+#submit_button {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    border: none;
+    width: 150px;
+    height: 29px;
+    background-color: var(--color4);
+    font-family: monospace;
+    font-weight: 900;
+    font-size: large;
+    cursor: pointer;
+}
+
+fieldset {
+    height: 330px;
+    width: 420px;
+    border-radius: 5px;
+}
+
+legend {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    color: var(--color4);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 10px; 
+}
+
+@media(min-width: 320px) {
+    .header-container {
+        background-color: var(--color2);
+        display: flex;
+        justify-content: center;
+        gap: 55px;
+        padding: 50px;
+        padding-bottom: 0px;
+        margin: auto;
+    }
+
+    .testimonials-container {
+        padding: 50px 10px;
+        border: 5px solid var(--color2);
+    }
+
+    .works-container {
+        border: 5px solid var(--color2);
+        padding: 50px 50px;
+        margin: auto;
+    }
+
+    .works-container ol {
+        color: var(--color4);
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+        padding-left: 0;
+    }   
+
+    .gallery-container img {
+        margin-left: 0;
+        margin-right: 0;
+        height: 100%;
+        width: 100%;
+        border: 5px solid var(--color2);
+        border-radius: 5px;
+    }
+
+    #mitsuki_image {
+        margin-top: 0;
+        height: 115px;
+    }
+
+    .first-row {
+        display: flex;
+        justify-content: space-evenly;
+        align-content: center;
+        gap: 10px;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .second-row {
+        display: flex;
+        justify-content: space-evenly;
+        align-content: center;
+        gap: 10px;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .third-row {
+        display: flex;
+        justify-content: space-evenly;
+        align-content: center;
+        gap: 10px;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .form-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 485px;
+        width: 100%;
+    }
+
+    form {
+        height: 288px;
+        width: 258px;
+        padding: 10px;
+        background-color: var(--color2);
+    }
+}
+
+@media(min-width: 321px) and (max-width: 375px) {
+    #mitsuki_image {
+        margin-top: 0;
+        height: 150px;
+    }
+
+    .form-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 490px;
+        width: 100%;
+    }
+
+    form {
+        height: 288px;
+        width: auto;
+        padding: 10px;
+        background-color: var(--color2);
+    }
+}
+
+@media(min-width: 376px) and (max-width: 425px) {
+    #mitsuki_image {
+        height: 200px;
+    }
+
+    .form-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 500px;
+        width: 100%;
+    }
+
+    form {
+        height: 288px;
+        width: auto;
+        padding: 10px;
+        background-color: var(--color2);
+    }
+}
+
+@media(min-width: 426px) and (max-width: 768px){
+    #mitsuki_image {
+        height: 330px;
+    }
+
+    .form-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 510px;
+        width: 100%;
+    }
+
+    form {
+        height: 288px;
+        width: auto;
+        padding: 10px;
+        background-color: var(--color2);
+    }
+}
+
+@media(min-width: 769px) and (max-width: 1024px) {
+    p {
+        color: var(--color4);
+        text-align: center;
+        border: 3px dashed var(--color2);
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .inthobb-container {
+        padding: 50px 50px;
+        border: 5px dashed var(--color2);
+    }
+
+    .inthobb-container ul {
+        color: var(--color4);
+        font-weight: lighter;
+        list-style: none;
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .inthobb-container li {
+        margin-top: 20px;
+    }
+
+    .works-container {
+        border: 5px solid var(--color2);
+        padding: 50px 50px;
+        margin: auto;
+    }
+
+    .works-container ol {
+        color: var(--color4);
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        padding-left: 0;
+    }
+
+    .links-container ol a {
+        color: var(--color4);
+        text-decoration: none;
+        border: 3px solid var(--color2);
+        padding: 4px 15px;
+        background-color: var(--color5); 
+    }
+
+    .testimonials-container {
+        padding: 50px 50px;
+        border: 5px solid var(--color2);
+    }
+
+    .gallery-container {
+        padding: 50px 50px;
+        border: 5px solid var(--color2);
+    }
+
+    .gallery-container img {
+        margin-left: 0;
+        margin-right: 0;
+        height: 100%;
+        width: 48%;
+        border: 5px solid var(--color2);
+        border-radius: 5px;
+    }
+
+    #mitsuki_image {
+        margin-top: 30px;
+        height: 240px;
+    }
+
+    .first-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-bottom: 10px;
+    }
+
+    .second-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-bottom: 10px;
+    }
+
+    .third-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .form-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 510px;
+        width: 100%;
+    }
+
+    form {
+        height: 288px;
+        width: auto;
+        padding: 10px;
+        background-color: var(--color2);
+    }
+}
+
+@media(min-width: 1025px) {
+    .gallery-container img {
+        margin-left: 0;
+        margin-right: 0;
+        height: 100%;
+        width: 48%;
+        border: 5px solid var(--color2);
+        border-radius: 5px;
+    }
+
+    #mitsuki_image {
+        margin-top: 37px;
+        height: 100%;
+    }
+
+    .first-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-bottom: 10px;
+    }
+
+    .second-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-bottom: 10px;
+    }
+
+    .third-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .form-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 550px;
+        width: 100%;
+    }
+
+    form {
+        height: 288px;
+        width: 400px;
+        padding: 10px;
+        background-color: var(--color2);
+    }
+}
